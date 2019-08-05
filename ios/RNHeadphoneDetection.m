@@ -21,8 +21,6 @@ RCT_EXPORT_MODULE(RNHeadphoneDetection)
 
 static NSString * const AUDIO_DEVICE_CHANGED_NOTIFICATION = @"AUDIO_DEVICE_CHANGED_NOTIFICATION";
 static NSString * const IS_AUDIO_DEVICE_CONNECTED = @"isAudioDeviceConnected";
-static NSString * const AUDIO_JACK = @"audioJack";
-static NSString * const BLUETOOTH = @"bluetooth";
 
 - (instancetype) init
 {
@@ -80,7 +78,7 @@ static NSString * const BLUETOOTH = @"bluetooth";
 + (NSDictionary *) isAudioDeviceConnected
 {
     NSMutableDictionary *res = [
-                                @{ AUDIO_JACK: @NO, BLUETOOTH: @NO }
+                                @{ @"audioJack": @NO, @"bluetooth": @NO }
                                 mutableCopy
                                 ];
 
@@ -88,7 +86,7 @@ static NSString * const BLUETOOTH = @"bluetooth";
 
     for (AVAudioSessionPortDescription* desc in [route outputs]) {
         if ([[desc portType] isEqualToString:AVAudioSessionPortHeadphones]) {
-            res[@[AUDIO_JACK]] = @YES;
+            res[@"audioJack"] = @YES;
         }
 
         if (
@@ -96,7 +94,7 @@ static NSString * const BLUETOOTH = @"bluetooth";
             [[desc portType] isEqualToString:AVAudioSessionPortBluetoothHFP] ||
             [[desc portType] isEqualToString:AVAudioSessionPortBluetoothLE]
             ) {
-            res[@[BLUETOOTH]] = @YES;
+            res[@"bluetooth"] = @YES;
         }
     }
 
