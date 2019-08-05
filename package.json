@@ -1,6 +1,6 @@
 {
   "name": "react-native-headphone-detection",
-  "version": "1.0.2",
+  "version": "1.1.1",
   "description": "React Native headphone detection, both audio jack and bluetooth devices!",
   "main": "index.js",
   "scripts": {},
@@ -8,12 +8,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Tintef/rn-headphone-detection.git"
+    "url": "git+https://github.com/Tintef/react-native-headphone-detection.git"
   },
   "bugs": {
-    "url": "https://github.com/Tintef/rn-headphone-detection/issues"
+    "url": "https://github.com/Tintef/react-native-headphone-detection/issues"
   },
-  "homepage": "https://github.com/Tintef/rn-headphone-detection#readme",
+  "homepage": "https://github.com/Tintef/react-native-headphone-detection#readme",
   "keywords": [
     "react-native",
     "headphones",

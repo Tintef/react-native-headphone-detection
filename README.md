@@ -7,7 +7,7 @@
 
 ### Mostly automatic installation
 
-- For `"react-native": "0.60.4"`
+- For `react-native` 0.60+:
 
   ```bash
   $ cd ios && pod install && cd ..
@@ -18,6 +18,12 @@
   ```bash
   $ react-native link react-native-headphone-detection
   ```
+
+Add permissions for android:
+```java
+<uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+<uses-permission android:name="android.permission.BLUETOOTH" />
+```
 
 ## Usage
 ```javascript
@@ -37,5 +43,7 @@ HeadphoneDetection.isAudioDeviceConnected().then(console.log);
 HeadphoneDetection.addListener(console.log);
 
 // Don't forget to remove the listener!
-HeadphoneDetection.remove();
+if (HeadphoneDetection.remove) { // The remove is not necessary on Android
+  HeadphoneDetection.remove();
+}
 ```
