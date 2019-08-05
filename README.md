@@ -7,13 +7,35 @@
 
 ### Mostly automatic installation
 
-`$ react-native link react-native-headphone-detection`
+- For `"react-native": "0.60.4"`
 
+  ```bash
+  $ cd ios && pod install && cd ..
+  ```
+
+- For previous versions:
+
+  ```bash
+  $ react-native link react-native-headphone-detection
+  ```
 
 ## Usage
 ```javascript
-import RNHeadphoneDetection from 'react-native-headphone-detection';
+import HeadphoneDetection from 'react-native-headphone-detection';
 
-// TODO: What to do with the module?
-RNHeadphoneDetection;
+// Function
+HeadphoneDetection.isAudioDeviceConnected().then(console.log);
+/*
+  Output:
+  {
+    audioJack: boolean,
+    bluetooth: boolean,
+  }
+*/
+
+// You can also use it as an event listener
+HeadphoneDetection.addListener(console.log);
+
+// Don't forget to remove the listener!
+HeadphoneDetection.remove();
 ```
