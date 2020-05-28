@@ -106,7 +106,8 @@ public class RNHeadphoneDetectionModule extends ReactContextBaseJavaModule imple
         AudioDeviceInfo device = devices[i];
         if (
           device.getType() == AudioDeviceInfo.TYPE_WIRED_HEADPHONES ||
-          device.getType() == AudioDeviceInfo.TYPE_WIRED_HEADSET
+          device.getType() == AudioDeviceInfo.TYPE_WIRED_HEADSET ||
+          device.getType() == AudioDeviceInfo.TYPE_USB_HEADSET
         ) {
           res.put("audioJack", true);
         }
