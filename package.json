@@ -7,9 +7,6 @@
   "scripts": {
     "build": "tsc"
   },
-  "files": [
-    "dist"
-  ],
   "author": "Nicolás Tinte",
   "license": "MIT",
   "repository": {
