@@ -1,6 +1,6 @@
 {
   "name": "react-native-headphone-detection",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "React Native headphone detection, both audio jack and bluetooth devices!",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
