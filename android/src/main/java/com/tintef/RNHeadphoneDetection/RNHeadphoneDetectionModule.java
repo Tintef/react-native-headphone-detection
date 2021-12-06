@@ -1,5 +1,5 @@
 
-package com.tintef.RNHeadphoneDetection;
+package com.tintef.HeadphoneDetection;
 
 import com.facebook.react.bridge.LifecycleEventListener;
 import com.facebook.react.bridge.ReactApplicationContext;
