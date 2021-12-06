@@ -1,5 +1,5 @@
 
-package com.tintef.HeadphoneDetection;
+package com.tintef.RNHeadphoneDetection;
 
 import java.util.Arrays;
 import java.util.Collections;
