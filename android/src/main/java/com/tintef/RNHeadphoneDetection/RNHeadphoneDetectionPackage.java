@@ -1,5 +1,5 @@
 
-package com.tintef.HeadphoneDetection;
+package com.tintef.RNHeadphoneDetection;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -14,7 +14,7 @@ import com.facebook.react.bridge.JavaScriptModule;
 public class RNHeadphoneDetectionPackage implements ReactPackage {
     @Override
     public List<NativeModule> createNativeModules(ReactApplicationContext reactContext) {
-      return Arrays.<NativeModule>asList(new com.tintef.HeadphoneDetection.RNHeadphoneDetectionModule(reactContext));
+      return Arrays.<NativeModule>asList(new RNHeadphoneDetectionModule(reactContext));
     }
 
     // Deprecated from RN 0.47
