@@ -4,7 +4,7 @@ import {
 } from 'react-native';
 
 const { RNHeadphoneDetection } = NativeModules;
-const eventEmitter = new NativeEventEmitter(RNHeadphoneDetection);
+const eventEmitter = new NativeEventEmitter();
 
 export default {
   ...RNHeadphoneDetection,
